@@ -108,7 +108,7 @@ angular.module('liskApp').controller('sendTransactionController', ['oxyAPI', '$s
         }
 
         if (string[string.length - 1] == 'R') {
-            var isnum = /^\d+$/.test(string.substring(0, string.length - 1));
+            var isnum = /^\d+$/.test(string.substring(0, string.length - 3));
             if (isnum && string.length - 1 >= 1 && string.length - 1 <= 20) {
                 $scope.accountValid = true;
             } else {
