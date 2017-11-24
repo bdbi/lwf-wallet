@@ -43,7 +43,7 @@ angular.module('liskApp').controller('sendTransactionController', ['oxyAPI', '$s
     }
 
     function validateForm (onValid) {
-        var isAddress = /^[0-9]+[LWF|lwf]$/g;
+        var isAddress = /^[0-9]+LWF|lwf$/g;
         var correctAddress = isAddress.test($scope.to);
 
         $scope.errorMessage = {};
