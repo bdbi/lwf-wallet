@@ -244,6 +244,7 @@ angular.module('liskApp').controller('sendTransactionController', ['oxyAPI', '$s
               Materialize.toast('Transaction sent', 3000, 'green white-text');
             })
             .catch(function(err) {
+                console.log('hey',err)
               $scope.sending = false;
               Materialize.toast('Transaction error', 3000, 'red white-text');
               $scope.errorMessage.fromServer = err.message;
